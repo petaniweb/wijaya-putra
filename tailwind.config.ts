@@ -1,20 +1,30 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
-  theme: {
-    extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
-    },
-  },
-  plugins: [],
+	mode: "jit",
+	content: [
+		"./pages/**/*.{js,ts,jsx,tsx,mdx}",
+		"./components/**/*.{js,ts,jsx,tsx,mdx}",
+		"./app/**/*.{js,ts,jsx,tsx,mdx}",
+	],
+	theme: {
+		extend: {
+			backgroundImage: {
+				hero: "url('../assets/images/dummy-hero.jpg')",
+			},
+			colors: {
+				primary: "#216CA9",
+			},
+			padding: {
+				// sm //
+				sectionpxsm: "22px",
+				// lg //
+				sectionpxlg: "160px",
+				// 2xl //
+				sectionpx2xl: "200px",
+			},
+		},
+	},
+	plugins: [],
 };
 export default config;
