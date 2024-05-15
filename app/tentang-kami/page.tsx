@@ -68,7 +68,7 @@ export default function TentangKami() {
 										Menjadi mitra yang bisa dipercaya dan
 										berpegang pada{" "}
 										<span className="italic font-medium">
-											"Safety Number One"
+											&quot;Safety Number One&quot;
 										</span>
 										, ketepatan waktu, dan koordinasi team
 										yang profesional.
