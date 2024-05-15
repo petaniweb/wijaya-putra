@@ -1,6 +1,3 @@
-import Link from "next/link";
-import Image from "next/image";
-
 // Import Components //
 import Navbar from "@/components/navbar";
 import ContactForm from "@/components/contact-form";

@@ -1,6 +1,8 @@
 import Image from "next/image";
 import logo from "@/assets/images/dummy-logo.svg";
 import Link from "next/link";
+
+// Import Icons //
 import { ChevronDownIcon } from "@radix-ui/react-icons";
 
 type NavItem = {
