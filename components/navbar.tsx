@@ -49,7 +49,7 @@ function Navbar() {
 			{/* <-- ==== Navbar Mobile End ==== --> */}
 
 			{/* <-- ==== Navbar Desktop Start ==== --> */}
-			<nav className="hidden fixed lg:flex w-full z-50 px-sectionpxlg 2xl:px-sectionpx2xl justify-between py-6 bg-black bg-opacity-45 backdrop-blur">
+			<nav className="hidden fixed lg:flex w-full z-50 px-sectionpxlg 2xl:px-sectionpx2xl justify-between items-center py-6 bg-black bg-opacity-45 backdrop-blur">
 				{/* <-- === Logo Start === --> */}
 				<Link href="/">
 					<Image
