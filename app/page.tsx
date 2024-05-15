@@ -3,6 +3,7 @@ import Link from "next/link";
 
 // Import Components //
 import Navbar from "@/components/navbar";
+import GaleriCarousel from "@/components/galeri-carousel";
 import Footer from "@/components/footer";
 
 // Import Assets //
@@ -110,27 +111,12 @@ export default function Home() {
 						</h1>
 					</div>
 				</div>
-				<div className="w-full flex flex-col lg:pt-24">
-					<Image
-						src={dummygaleri}
-						alt="Galeri"
-						priority={true}
-						className="w-full h-auto"
-					/>
-					<div className="bg-primary w-full flex justify-between lg:gap-16 items-center h-auto lg:px-16 lg:py-9">
-						<div className="w-fit whitespace-nowrap">
-							<p className="lg:text-[22px] text-white font-medium">
-								Ambulance CSR
-							</p>
-						</div>
-						<div className="w-full h-[1px] bg-white"></div>
-						<div className="w-fit whitespace-nowrap">
-							<p className="lg:text-[22px] text-white text-right font-medium">
-								2024
-							</p>
-						</div>
-					</div>
+
+				{/* <-- ==== Galeri Carousel Start ==== --> */}
+				<div className="w-full pt-24">
+					<GaleriCarousel />
 				</div>
+				{/* <-- ==== Galeri Carousel End ==== --> */}
 			</section>
 			{/* <-- ==== Galeri Section Start ==== --> */}
 
