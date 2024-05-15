@@ -10,7 +10,7 @@ const config: Config = {
 	theme: {
 		extend: {
 			backgroundImage: {
-				hero: "url('../assets/images/dummy-hero.jpg')",
+				bgcontact: "url('../assets/images/dummy-contact.png')",
 			},
 			colors: {
 				primary: "#216CA9",
