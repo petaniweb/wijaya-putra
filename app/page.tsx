@@ -5,6 +5,7 @@ import Link from "next/link";
 import Navbar from "@/components/navbar";
 import HeroCarousel from "@/components/hero-carousel";
 import GaleriCarousel from "@/components/galeri-carousel";
+import { LanguageSelector } from "@/components/lang-selector";
 import Footer from "@/components/footer";
 
 // Import Assets //
@@ -37,6 +38,7 @@ export default function Home() {
 					</div>
 				</div>
 				<div className="w-full h-auto lg:pt-28">
+					<LanguageSelector />
 					<Image
 						src={dummymap}
 						alt="Rute Layanan"
