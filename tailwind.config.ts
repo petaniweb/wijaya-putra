@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config = {
-	darkMode: ["class"],
+	mode: "jit",
 	content: [
 		"./pages/**/*.{ts,tsx}",
 		"./components/**/*.{ts,tsx}",

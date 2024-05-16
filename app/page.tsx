@@ -3,13 +3,13 @@ import Link from "next/link";
 
 // Import Components //
 import Navbar from "@/components/navbar";
+import HeroCarousel from "@/components/hero-carousel";
 import GaleriCarousel from "@/components/galeri-carousel";
 import Footer from "@/components/footer";
 
 // Import Assets //
 import dummyhero from "@/assets/images/dummy-hero.png";
 import dummymap from "@/assets/images/dummy-map.png";
-import dummygaleri from "@/assets/images/dummy-galeri.png";
 import ontime from "@/assets/icons/icon-ontime.png";
 import safety from "@/assets/icons/icon-safetyfirst.png";
 import professional from "@/assets/icons/icon-professional.png";
@@ -22,13 +22,8 @@ export default function Home() {
 			{/* <-- ==== Navbar End ==== --> */}
 
 			{/* <-- ==== Hero Section Start ==== --> */}
-			<div className="w-full">
-				<Image
-					src={dummyhero}
-					alt="Hero"
-					priority={true}
-					className="w-full h-auto"
-				/>
+			<div className="w-full h-screen">
+				<HeroCarousel />
 			</div>
 			{/* <-- ==== Hero Section End ==== --> */}
 
