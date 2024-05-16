@@ -2,18 +2,17 @@ import Image from "next/image";
 import Link from "next/link";
 
 // Import Components //
-import Navbar from "@/components/navbar";
-import HeroCarousel from "@/components/hero-carousel";
-import GaleriCarousel from "@/components/galeri-carousel";
-import { LanguageSelector } from "@/components/lang-selector";
-import Footer from "@/components/footer";
+import Navbar from "../../components/navbar";
+import HeroCarousel from "../../components/hero-carousel";
+import GaleriCarousel from "../../components/galeri-carousel";
+import { LanguageSelector } from "../../components/lang-selector";
+import Footer from "../../components/footer";
 
 // Import Assets //
-import dummyhero from "@/assets/images/dummy-hero.png";
-import dummymap from "@/assets/images/dummy-map.png";
-import ontime from "@/assets/icons/icon-ontime.png";
-import safety from "@/assets/icons/icon-safetyfirst.png";
-import professional from "@/assets/icons/icon-professional.png";
+import dummymap from "../../assets/images/dummy-map.png";
+import ontime from "../../assets/icons/icon-ontime.png";
+import safety from "../../assets/icons/icon-safetyfirst.png";
+import professional from "../../assets/icons/icon-professional.png";
 
 export default function Home() {
 	return (

@@ -10,12 +10,12 @@ import {
 	CarouselPrevious,
 	CarouselNext,
 	type CarouselApi,
-} from "@/components/ui/carousel";
+} from "./ui/carousel";
 
 // Import Assets //
-import dummycarouselitem1 from "@/assets/images/dummy-carousel-item-1.png";
-import dummycarouselitem2 from "@/assets/images/dummy-carousel-item-2.png";
-import dummycarouselitem3 from "@/assets/images/dummy-carousel-item-3.png";
+import dummycarouselitem1 from "../assets/images/dummy-carousel-item-1.png";
+import dummycarouselitem2 from "../assets/images/dummy-carousel-item-2.png";
+import dummycarouselitem3 from "../assets/images/dummy-carousel-item-3.png";
 
 const heroTexts = [
 	"MENJELAJAH <br /> BERSAMA KAMI",
@@ -133,8 +133,8 @@ export default function HeroCarousel({
 					</CarouselItem>
 				</CarouselContent>
 
-				<div className="absolute px-sectionpxlg pb-[70px] inset-0 flex flex-col justify-end gap-3">
-					<div className="w-full pl-8 pr-[84px]">
+				<div className="absolute px-sectionpxlg pb-[70px] inset-0 flex flex-col justify-end gap-[14px]">
+					<div className="w-full">
 						<div
 							className={`w-full px-8 py-6 flex justify-between items-start ${getBgColorClass()}`}
 						>
@@ -143,7 +143,7 @@ export default function HeroCarousel({
 								dangerouslySetInnerHTML={{ __html: heroText }}
 							></h1>
 							{current === 2 || current === 3 || current === 4 ? (
-								<p className="text-[15px] text-white font-light basis-3/4 pt-1">
+								<p className="text-[15px] text-white font-light basis-4/5 pt-1">
 									{heroDescription}
 								</p>
 							) : null}
