@@ -3,10 +3,9 @@ import {
 	SelectContent,
 	SelectGroup,
 	SelectItem,
-	SelectLabel,
 	SelectTrigger,
 	SelectValue,
-} from "@/components/ui/select";
+} from "./ui/select";
 
 export function LanguageSelector() {
 	return (

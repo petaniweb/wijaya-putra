@@ -1,12 +1,12 @@
 import Image from "next/image";
 
 // Import Components //
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
+import Navbar from "../../../components/navbar";
+import Footer from "../../../components/footer";
 
 // Import Assets //
-import vision from "@/assets/icons/icon-vision.svg";
-import mission from "@/assets/icons/icon-mission.svg";
+import vision from "../../../assets/icons/icon-vision.svg";
+import mission from "../../../assets/icons/icon-mission.svg";
 
 export default function TentangKami() {
 	return (
