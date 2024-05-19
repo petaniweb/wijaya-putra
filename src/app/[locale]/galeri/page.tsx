@@ -1,7 +1,7 @@
 // Import Components //
-import Navbar from "../../../components/navbar";
-import GaleriCarousel from "../../../components/galeri-carousel";
-import Footer from "../../../components/footer";
+import Navbar from "@/app/components/navbar";
+import GaleriCarousel from "@/app/components/galeri-carousel";
+import Footer from "@/app/components/footer";
 
 export default function Galeri() {
 	return (

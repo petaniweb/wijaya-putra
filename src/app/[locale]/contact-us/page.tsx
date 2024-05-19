@@ -1,7 +1,7 @@
 // Import Components //
-import Navbar from "../../../components/navbar";
-import ContactForm from "../../../components/contact-form";
-import Footer from "../../../components/footer";
+import Navbar from "@/app/components/navbar";
+import ContactForm from "@/app/components/contact-form";
+import Footer from "@/app/components/footer";
 
 export default function Contact() {
 	return (

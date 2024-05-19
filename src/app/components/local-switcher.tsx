@@ -7,7 +7,7 @@ import {
 	SelectValue,
 } from "./ui/select";
 
-export function LanguageSelector() {
+export function LocalSwitcher() {
 	return (
 		<Select defaultValue="indonesia">
 			<SelectTrigger className="w-fit">

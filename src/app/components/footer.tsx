@@ -2,9 +2,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 // Import Assets //
-import whatsapp from "../assets/icons/icon-whatsapp.png";
-import tiktok from "../assets/icons/icon-tiktok.png";
-import email from "../assets/icons/icon-email.png";
+import whatsapp from "../../../assets/icons/icon-whatsapp.png";
+import tiktok from "../../../assets/icons/icon-tiktok.png";
+import email from "../../../assets/icons/icon-email.png";
 
 export default function Footer() {
 	return (
