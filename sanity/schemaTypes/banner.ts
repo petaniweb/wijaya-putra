@@ -6,6 +6,10 @@ export const bannerType = defineType({
   type: "document",
   fields: [
     defineField({
+      name: "number",
+      type: "number",
+    }),
+    defineField({
       name: "title",
       type: "string",
     }),
@@ -14,12 +18,19 @@ export const bannerType = defineType({
       type: "string",
     }),
     defineField({
+      name: "backgroundColor",
+      type: "color",
+    }),
+    defineField({
       name: "image",
       type: "image",
     }),
     defineField({
       name: "video",
       type: "file",
+      options: {
+        accept: "video/mp4",
+      },
     }),
   ],
 });

@@ -1,5 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import { SanityDocument } from "next-sanity";
+import { SanityImageSource } from "@sanity/image-url/lib/types/types";
+import { sanityFetch, client } from "../../sanity/lib/client";
 
 // Import Components //
 import Navbar from "../../components/navbar";
@@ -13,8 +16,31 @@ import dummymap from "../../assets/images/dummy-map.png";
 import ontime from "../../assets/icons/icon-ontime.png";
 import safety from "../../assets/icons/icon-safetyfirst.png";
 import professional from "../../assets/icons/icon-professional.png";
+import { urlForImage } from "../../sanity/lib/image";
+import { urlForVideo } from "../../sanity/lib/file";
 
-export default function Home() {
+
+const BANNERS_QUERY = `*[_type == "banner"]|order(number asc){_id, title, image, description, video, number, backgroundColor}`;
+
+export default async function Home() {
+	const banners = await sanityFetch<SanityDocument[]>({ query: BANNERS_QUERY });
+	const formattedBanners = banners.map((banner) => {
+		return {
+      ...banner,
+      ...(banner?.image && { image: urlForImage(banner.image) }),
+      ...(banner?.video && { video: urlForVideo(banner.video) }),
+      ...(banner?.backgroundColor?.hex && {
+        backgroundColor: banner?.backgroundColor?.hex,
+      }),
+    };
+	}) as unknown as {
+		_id: string;
+		title: string;
+		description: string;
+		backgroundColor: string;
+		image?: string;
+		video?: string;
+	}[];
 	return (
 		<>
 			{/* <-- ==== Navbar Start ==== --> */}
@@ -23,7 +49,7 @@ export default function Home() {
 
 			{/* <-- ==== Hero Section Start ==== --> */}
 			<div className="w-full h-screen">
-				<HeroCarousel />
+				<HeroCarousel banners={formattedBanners}/>
 			</div>
 			{/* <-- ==== Hero Section End ==== --> */}
 
