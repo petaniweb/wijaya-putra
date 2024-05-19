@@ -9,9 +9,9 @@ import {
 } from "./ui/carousel";
 
 // Import Assets //
-import dummycarouselitem1 from "../assets/images/dummy-carousel-item-1.png";
-import dummycarouselitem2 from "../assets/images/dummy-carousel-item-2.png";
-import dummycarouselitem3 from "../assets/images/dummy-carousel-item-3.png";
+import dummycarouselitem1 from "../../../assets/images/dummy-carousel-item-1.png";
+import dummycarouselitem2 from "../../../assets/images/dummy-carousel-item-2.png";
+import dummycarouselitem3 from "../../../assets/images/dummy-carousel-item-3.png";
 
 export default function GaleriCarousel() {
 	return (

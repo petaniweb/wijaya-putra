@@ -11,41 +11,29 @@ import {
 	CarouselNext,
 	type CarouselApi,
 } from "./ui/carousel";
-
-// Import Assets //
-import dummycarouselitem1 from "../assets/images/dummy-carousel-item-1.png";
-import dummycarouselitem2 from "../assets/images/dummy-carousel-item-2.png";
-import dummycarouselitem3 from "../assets/images/dummy-carousel-item-3.png";
-
-const heroTexts = [
-	"MENJELAJAH <br /> BERSAMA KAMI",
-	"PENGALAMAN <br /> BERTAHUN-TAHUN",
-	"REGENERASI <br /> UNIT",
-	"PROGRAM <br /> CSR",
-];
-
-const heroDescriptions = [
-	"",
-	"Sejak didirikan tahun 1985, PT. Wijaya Putra Santoso menawarkan jasa logistik dan professional dan terpercaya dan telah teruji oleh waktu.",
-	"Kami berkomitmen untuk melakukan regenerasi unit untuk menjaga keamanan dalam proses pengiriman dan untuk mengurangi emisi karbon.",
-	"Membantu dan mendukung lingkungan sekitar dan komunitas lokal adalah salah satu Misi kami dalam menjalankan perusahaan. Salah satu perwujudan dari program ini adalah dengan menyediakan layanan ambulans gratis.",
-];
+import dummycarouselitem1 from "../../../assets/images/dummy-carousel-item-1.png";
+import dummycarouselitem2 from "../../../assets/images/dummy-carousel-item-2.png";
+import dummycarouselitem3 from "../../../assets/images/dummy-carousel-item-3.png";
 
 interface HeroCarouselProps {
 	bgColorClass?: string;
 	bgColorClass3?: string;
 	bgColorClass4?: string;
+	heroTitles: string[];
+	heroDescriptions: string[];
 }
 
 export default function HeroCarousel({
 	bgColorClass = "bg-inherit",
 	bgColorClass3 = "bg-primary",
 	bgColorClass4 = "bg-black",
+	heroTitles,
+	heroDescriptions,
 }: HeroCarouselProps) {
 	const [api, setApi] = React.useState<CarouselApi>();
 	const [current, setCurrent] = React.useState(0);
 	const [count, setCount] = React.useState(0);
-	const [heroText, setHeroText] = React.useState(heroTexts[0]);
+	const [heroTitle, setHeroTitle] = React.useState(heroTitles[0]);
 	const [heroDescription, setHeroDescription] = React.useState(
 		heroDescriptions[0]
 	);
@@ -61,10 +49,10 @@ export default function HeroCarousel({
 		api.on("select", () => {
 			const selectedIndex = api.selectedScrollSnap();
 			setCurrent(selectedIndex + 1);
-			setHeroText(heroTexts[selectedIndex]);
+			setHeroTitle(heroTitles[selectedIndex]);
 			setHeroDescription(heroDescriptions[selectedIndex] || "");
 		});
-	}, [api]);
+	}, [api, heroTitles, heroDescriptions]);
 
 	const getBgColorClass = () => {
 		if (current === 3) {
@@ -140,10 +128,10 @@ export default function HeroCarousel({
 						>
 							<h1
 								className="text-[50px] text-white font-semibold leading-tight w-full"
-								dangerouslySetInnerHTML={{ __html: heroText }}
+								dangerouslySetInnerHTML={{ __html: heroTitle }}
 							></h1>
 							{current === 2 || current === 3 || current === 4 ? (
-								<p className="text-[15px] text-white font-light basis-4/5 pt-1">
+								<p className="text-[15px] text-white font-light basis-4/5 pt-1 leading-relaxed">
 									{heroDescription}
 								</p>
 							) : null}

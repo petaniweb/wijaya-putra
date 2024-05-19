@@ -20,7 +20,7 @@ const config = {
 		},
 		extend: {
 			backgroundImage: {
-				bgcontact: "url('../../assets/images/dummy-contact.png')",
+				bgcontact: "url('../../../assets/images/dummy-contact.png')",
 			},
 			colors: {
 				primary: "#216CA9",

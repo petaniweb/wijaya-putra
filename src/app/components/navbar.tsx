@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
 
 // Import Assets //
-import logo from "../assets/images/dummy-logo.svg";
+import logo from "../../../assets/images/dummy-logo.svg";
 
 type NavItem = {
 	label: string;
