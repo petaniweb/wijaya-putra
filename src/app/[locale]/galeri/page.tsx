@@ -3,6 +3,8 @@ import Navbar from "@/app/components/navbar";
 import GaleriCarousel from "@/app/components/galeri-carousel";
 import Footer from "@/app/components/footer";
 
+export const runtime = "edge";
+
 export default function Galeri() {
 	return (
 		<>

@@ -12,6 +12,8 @@ import ontime from "../../../assets/icons/icon-ontime.png";
 import safety from "../../../assets/icons/icon-safetyfirst.png";
 import professional from "../../../assets/icons/icon-professional.png";
 
+export const runtime = "edge";
+
 export default function Home() {
 	const trRoute = useTranslations("RouteSection");
 	const trGallery = useTranslations("GallerySection");

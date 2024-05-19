@@ -3,6 +3,8 @@ import Navbar from "@/app/components/navbar";
 import ContactForm from "@/app/components/contact-form";
 import Footer from "@/app/components/footer";
 
+export const runtime = "edge";
+
 export default function Contact() {
 	return (
 		<>

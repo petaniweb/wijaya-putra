@@ -9,6 +9,8 @@ import Footer from "@/app/components/footer";
 import vision from "../../../../assets/icons/icon-vision.svg";
 import mission from "../../../../assets/icons/icon-mission.svg";
 
+export const runtime = "edge";
+
 export default function TentangKami() {
 	const trTentangkami = useTranslations("TentangkamiPage");
 
